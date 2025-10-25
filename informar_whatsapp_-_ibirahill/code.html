@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ibirahill - Pesquisa de Mercado</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#243133",
+              "background-light": "#f7f7f7",
+              "background-dark": "#171a1b",
+              "custom-bg": "#cdc4ad",
+              "custom-primary": "#233133",
+              "custom-button-text": "#cdc4ad",
+            },
+            fontFamily: {
+              "display": ["Epilogue", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-custom-bg group/design-root">
+<div class="flex h-full grow flex-col">
+<div class="sticky top-0 z-10 w-full bg-custom-bg/80 backdrop-blur-sm">
+<div class="mx-auto max-w-md px-4 sm:px-8">
+<header class="flex h-20 items-center justify-center whitespace-nowrap">
+<a class="flex items-center gap-3 text-custom-primary" href="#">
+<div class="h-6 w-6">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">Ibirahill</h2>
+</a>
+</header>
+</div>
+<div class="h-px w-full bg-custom-primary"></div>
+</div>
+<main class="flex flex-1 flex-col justify-between px-8 py-6">
+<div class="flex-grow">
+<h1 class="text-custom-primary tracking-tight text-3xl font-bold leading-tight text-left pb-2 pt-4">Qual é o seu WhatsApp?</h1>
+<p class="text-custom-primary text-base font-normal leading-relaxed pb-8 pt-1">Seu número será usado apenas para o acompanhamento da pesquisa de mercado pela equipe Ibirahill.</p>
+<div class="flex w-full flex-wrap items-end gap-4">
+<label class="flex w-full flex-col">
+<p class="text-custom-primary text-base font-medium leading-normal pb-2">Seu número com DDD</p>
+<div class="relative flex w-full items-center">
+<span class="absolute left-4 text-custom-primary/70">+55</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-custom-primary bg-transparent text-custom-primary focus:border-custom-primary focus:outline-0 focus:ring-1 focus:ring-custom-primary h-14 placeholder:text-custom-primary/50 pl-12 pr-4 py-3 text-base font-normal leading-normal" placeholder="(XX) XXXXX-XXXX" type="tel" value=""/>
+</div>
+</label>
+</div>
+</div>
+<div class="w-full pt-8 pb-4">
+<button class="flex h-14 w-full items-center justify-center rounded-lg bg-custom-primary px-6 text-base font-bold text-custom-button-text shadow-sm transition-colors hover:bg-opacity-90 active:bg-opacity-100">Finalizar Pesquisa</button>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
