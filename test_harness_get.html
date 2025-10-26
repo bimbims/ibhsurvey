@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Harness - GET</title>
+</head>
+<body>
+    <h1>Data Submission Test - GET</h1>
+    <p>This is a test page to verify data submission to the Google Sheet using the GET method.</p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const googleAppScriptUrl = 'https://script.google.com/macros/s/AKfycbwWgewuo6lsyoC_Yug_JuifkFF7ETew9c9Axov_JKM5MI6AeZ1_pQvwmBGqcTFuWbIRsw/exec';
+
+            // Test Data
+            const testData = {
+                age_range: 'TEST-GET-35-44',
+                travel_companion: 'TEST-GET-Casal',
+                frequency: 'TEST-GET-2-3 vezes',
+                location: 'TEST-GET-SP',
+                motivacao: 'TEST-GET-Descanso e relaxamento',
+                criterios: 'TEST-GET-Design e conforto',
+                comoSoube: 'TEST-GET-Google',
+                toco: 'TEST-GET-Silêncio e tranquilidade',
+                culinaria: 'TEST-GET-Contemporânea',
+                lazer: 'TEST-GET-Piscina e relaxamento',
+                aprimorar: 'TEST-GET-N/A',
+                email: 'test-get@example.com'
+            };
+
+            const queryString = new URLSearchParams(testData).toString();
+            const requestUrl = `${googleAppScriptUrl}?${queryString}`;
+
+            console.log("Sending the following test data via GET:", requestUrl);
+
+            fetch(requestUrl, { method: 'GET', mode: 'no-cors' })
+            .then(() => {
+                console.log('Test data submitted successfully via GET.');
+                document.body.innerHTML += '<p style="color: green;">Test data submitted via GET. Please check your Google Sheet for an entry with the email "test-get@example.com".</p>';
+            })
+            .catch(error => {
+                console.error('Error submitting test data via GET:', error);
+                document.body.innerHTML += '<p style="color: red;">Error submitting test data via GET. See console for details.</p>';
+            });
+        });
+    </script>
+</body>
+</html>

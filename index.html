@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ibirahill - Perfil do Viajante</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#243133",
+            "background-light": "#cdc4ad",
+            "background-dark": "#171a1b",
+          },
+          fontFamily: {
+            "display": ["Epilogue", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+    .icon-filled {
+      font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+    .disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-background-light font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-10 flex w-full items-center justify-center border-b border-solid border-primary/20 bg-background-light px-6 py-4">
+<img src="/public/logogreen.png" class="h-12" alt="Ibirahill logo">
+</header>
+<main class="flex flex-1 flex-col overflow-x-auto px-6 pb-24 pt-8">
+<div class="flex w-full min-w-max items-start justify-between gap-2 pb-8">
+<div class="flex flex-col items-center gap-2 text-primary">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-background-light">
+<span class="material-symbols-outlined icon-filled text-2xl">person</span>
+</div>
+<span class="text-xs font.bold">Perfil</span>
+</div>
+<div class="h-px w-full flex-1 self-center bg-primary/20" style="margin-top: -1.25rem;"></div>
+<div class="flex flex-col items-center gap-2 text-primary/50">
+<div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary/30">
+<span class="material-symbols-outlined text-2xl">emoji_objects</span>
+</div>
+<span class="text-xs font-medium">Expectativas</span>
+</div>
+<div class="h-px w-full flex-1 self-center bg-primary/20" style="margin-top: -1.25rem;"></div>
+<div class="flex flex-col items-center gap-2 text-primary/50">
+<div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary/30">
+<span class="material-symbols-outlined text-2xl">hotel_class</span>
+</div>
+<span class="text-xs font-medium">Experiência</span>
+</div>
+<div class="h-px w-full flex-1 self-center bg-primary/20" style="margin-top: -1.25rem;"></div>
+<div class="flex flex-col items-center gap-2 text-primary/50">
+<div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary/30">
+<span class="material-symbols-outlined text-2xl">flag</span>
+</div>
+<span class="text-xs font-medium">Encerramento</span>
+</div>
+</div>
+<div class="mb-8 text-center">
+<p class="text-4xl font-black leading-tight tracking-[-0.033em] text-primary">Perfil do Viajante</p>
+</div>
+<form id="perfil-form" class="flex flex-col gap-10">
+<div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-primary">Qual sua faixa etária?</h2>
+<div class="mt-4 flex flex-col gap-3">
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="age_range" type="radio" value="18-24" required/>
+<span class="text-base font-medium text-primary">18-24</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="age_range" type="radio" value="25-34" required/>
+<span class="text-base font-medium text-primary">25-34</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="age_range" type="radio" value="35-44" required/>
+<span class="text-base font-medium text-primary">35-44</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="age_range" type="radio" value="45+" required/>
+<span class="text-base font-medium text-primary">45+</span>
+</label>
+</div>
+</div>
+<div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-primary">Com quem você costuma viajar?</h2>
+<div class="mt-4 flex flex-col gap-3">
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="travel_companion" type="radio" value="Sozinho(a)" required/>
+<span class="text-base font-medium text-primary">Sozinho(a)</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="travel_companion" type="radio" value="Casal" required/>
+<span class="text-base font-medium text-primary">Casal</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="travel_companion" type="radio" value="Família" required/>
+<span class="text-base font-medium text-primary">Família</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="travel_companion" type="radio" value="Amigos" required/>
+<span class="text-base font-medium text-primary">Amigos</span>
+</label>
+</div>
+</div>
+<div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-primary">Com que frequência você viaja?</h2>
+<div class="mt-4 flex flex-col gap-3">
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="frequency" type="radio" value="1 vez por ano" required/>
+<span class="text-base font-medium text-primary">1 vez por ano</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="frequency" type="radio" value="2-3 vezes por ano" required/>
+<span class="text-base font-medium text-primary">2-3 vezes por ano</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="frequency" type="radio" value="4+ vezes por ano" required/>
+<span class="text-base font-medium text-primary">4+ vezes por ano</span>
+</label>
+</div>
+</div>
+<div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-primary">De onde você é?</h2>
+<div class="mt-4">
+  <select class="w-full rounded-lg border-2 border-primary/20 p-4 focus:border-primary focus:ring-primary focus:ring-offset-background-light" name="location" required>
+    <option value="" disabled selected>Selecione uma opção</option>
+    <option value="America do Norte">América do Norte</option>
+    <option value="America Central">América Central</option>
+    <option value="America do Sul">América do Sul</option>
+    <option value="Europa">Europa</option>
+    <option value="Asia">Ásia</option>
+    <option value="Acre">Acre</option>
+    <option value="Alagoas">Alagoas</option>
+    <option value="Amapá">Amapá</option>
+    <option value="Amazonas">Amazonas</option>
+    <option value="Bahia">Bahia</option>
+    <option value="Ceará">Ceará</option>
+    <option value="Distrito Federal">Distrito Federal</option>
+    <option value="Espírito Santo">Espírito Santo</option>
+    <option value="Goiás">Goiás</option>
+    <option value="Maranhão">Maranhão</option>
+    <option value="Mato Grosso">Mato Grosso</option>
+    <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+    <option value="Minas Gerais">Minas Gerais</option>
+    <option value="Pará">Pará</option>
+    <option value="Paraíba">Paraíba</option>
+    <option value="Paraná">Paraná</option>
+    <option value="Pernambuco">Pernambuco</option>
+    <option value="Piauí">Piauí</option>
+    <option value="Rio de Janeiro">Rio de Janeiro</option>
+    <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+    <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+    <option value="Rondônia">Rondônia</option>
+    <option value="Roraima">Roraima</option>
+    <option value="Santa Catarina">Santa Catarina</option>
+    <option value="São Paulo">São Paulo</option>
+    <option value="Sergipe">Sergipe</option>
+    <option value="Tocantins">Tocantins</option>
+  </select>
+</div>
+</div>
+</form>
+</main>
+<footer class="fixed bottom-0 left-0 z-10 w-full border-t border-primary/20 bg-background-light/80 p-4 backdrop-blur-sm">
+<div class="mx-auto w-full max-w-md">
+<a id="avancar" href="expectativas.html" class="flex w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-primary px-5 py-3 text-base font-bold text-background-light disabled">
+<span>Avançar</span>
+</a>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Clear any old data when starting the survey
+        localStorage.clear();
+
+        const form = document.getElementById('perfil-form');
+        const avancarButton = document.getElementById('avancar');
+
+        const validateForm = () => {
+            const isValid = form.checkValidity();
+            if (isValid) {
+                avancarButton.classList.remove('disabled');
+            } else {
+                avancarButton.classList.add('disabled');
+            }
+            return isValid;
+        };
+
+        form.addEventListener('change', validateForm);
+        
+        avancarButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (!validateForm()) {
+                return;
+            }
+            
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            localStorage.setItem('surveyData', JSON.stringify(data));
+            window.location.href = avancarButton.href;
+        });
+
+        // Initial validation check
+        validateForm();
+    });
+</script>
+</body></html>

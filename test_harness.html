@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Harness</title>
+</head>
+<body>
+    <h1>Data Submission Test</h1>
+    <p>This is a test page to verify data submission to the Google Sheet.</p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const googleAppScriptUrl = 'https://script.google.com/macros/s/AKfycbwWgewuo6lsyoC_Yug_JuifkFF7ETew9c9Axov_JKM5MI6AeZ1_pQvwmBGqcTFuWbIRsw/exec';
+
+            // Test Data
+            const testData = {
+                age_range: 'TEST-35-44',
+                travel_companion: 'TEST-Casal',
+                frequency: 'TEST-2-3 vezes',
+                location: 'TEST-SP',
+                motivacao: 'TEST-Descanso e relaxamento',
+                criterios: 'TEST-Design e conforto',
+                comoSoube: 'TEST-Google',
+                toco: 'TEST-Silêncio e tranquilidade',
+                culinaria: 'TEST-Contemporânea',
+                lazer: 'TEST-Piscina e relaxamento',
+                aprimorar: 'TEST-N/A',
+                email: 'test@example.com'
+            };
+
+            const formData = new URLSearchParams();
+            for (const key in testData) {
+                formData.append(key, testData[key]);
+            }
+
+            console.log("Sending the following test data:", testData);
+
+            fetch(googleAppScriptUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                cache: 'no-cache',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: formData.toString()
+            })
+            .then(() => {
+                console.log('Test data submitted successfully.');
+                document.body.innerHTML += '<p style="color: green;">Test data submitted. Please check your Google Sheet for an entry with the email "test@example.com".</p>';
+            })
+            .catch(error => {
+                console.error('Error submitting test data:', error);
+                document.body.innerHTML += '<p style="color: red;">Error submitting test data. See console for details.</p>';
+            });
+        });
+    </script>
+</body>
+</html>

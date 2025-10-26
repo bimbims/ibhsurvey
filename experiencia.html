@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ibirahill - Experiência Ideal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#243133",
+            "background-light": "#cdc4ad",
+            "background-dark": "#171a1b",
+          },
+          fontFamily: {
+            "display": ["Epilogue", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+    .icon-filled {
+      font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+    .disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-background-light font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-10 flex w-full items-center justify-center border-b border-solid border-primary/20 bg-background-light px-6 py-4">
+<img src="/public/logogreen.png" class="h-12" alt="Ibirahill logo">
+</header>
+<main class="flex flex-1 flex-col overflow-x-auto px-6 pb-24 pt-8">
+<div class="flex w-full min-w-max items-start justify-between gap-2 pb-8">
+<div class="flex flex-col items-center gap-2 text-primary">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-background-light">
+<span class="material-symbols-outlined icon-filled text-2xl">check</span>
+</div>
+<span class="text-xs font-bold">Perfil</span>
+</div>
+<div class="h-px w-full flex-1 self-center bg-primary" style="margin-top: -1.25rem;"></div>
+<div class="flex flex-col items-center gap-2 text-primary">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-background-light">
+<span class="material-symbols-outlined icon-filled text-2xl">check</span>
+</div>
+<span class="text-xs font-bold">Expectativas</span>
+</div>
+<div class="h-px w-full flex-1 self-center bg-primary" style="margin-top: -1.25rem;"></div>
+<div class="flex flex-col items-center gap-2 text-primary">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-background-light">
+<span class="material-symbols-outlined icon-filled text-2xl">hotel_class</span>
+</div>
+<span class="text-xs font-bold">Experiência</span>
+</div>
+<div class="h-px w-full flex-1 self-center bg-primary/20" style="margin-top: -1.25rem;"></div>
+<div class="flex flex-col items-center gap-2 text-primary/50">
+<div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary/30">
+<span class="material-symbols-outlined text-2xl">flag</span>
+</div>
+<span class="text-xs font-medium">Encerramento</span>
+</div>
+</div>
+<div class="mb-8 text-center">
+<p class="text-4xl font-black leading-tight tracking-[-0.033em] text-primary">Sua Experiência Ideal</p>
+</div>
+<form id="experiencia-form" class="flex flex-col gap-10">
+<div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-primary">O que mais te tocou na sua estadia? (escolha até 2)</h2>
+<div class="mt-4 flex flex-col gap-3">
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 rounded border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="toco" type="checkbox" value="Silêncio e tranquilidade"/>
+<span class="text-base font-medium text-primary">Silêncio e tranquilidade</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 rounded border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="toco" type="checkbox" value="Vista e natureza"/>
+<span class="text-base font-medium text-primary">Vista e natureza</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 rounded border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="toco" type="checkbox" value="Design e decoração"/>
+<span class="text-base font-medium text-primary">Design e decoração</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 rounded border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="toco" type="checkbox" value="Conforto e praticidade"/>
+<span class="text-base font-medium text-primary">Conforto e praticidade</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 rounded border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="toco" type="checkbox" value="Energia do lugar"/>
+<span class="text-base font-medium text-primary">Energia do lugar</span>
+</label>
+</div>
+</div>
+<div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-primary">Que tipo de culinária você prefere?</h2>
+<div class="mt-4 flex flex-col gap-3">
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="culinaria" type="radio" value="Local/Regional" required/>
+<span class="text-base font-medium text-primary">Local/Regional</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="culinaria" type="radio" value="Internacional" required/>
+<span class="text-base font-medium text-primary">Internacional</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="culinaria" type="radio" value="Contemporânea" required/>
+<span class="text-base font-medium text-primary">Contemporânea</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="culinaria" type="radio" value="Variada/Buffet" required/>
+<span class="text-base font-medium text-primary">Variada/Buffet</span>
+</label>
+</div>
+</div>
+<div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-primary">Quais atividades de lazer te interessam?</h2>
+<div class="mt-4 flex flex-col gap-3">
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 rounded border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="lazer" type="checkbox" value="Piscina e relaxamento"/>
+<span class="text-base font-medium text-primary">Piscina e relaxamento</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 rounded border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="lazer" type="checkbox" value="Spa e bem-estar"/>
+<span class="text-base font-medium text-primary">Spa e bem-estar</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 rounded border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="lazer" type="checkbox" value="Atividades ao ar livre"/>
+<span class="text-base font-medium text-primary">Atividades ao ar livre</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 rounded border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="lazer" type="checkbox" value="Eventos e entretenimento"/>
+<span class="text-base font-medium text-primary">Eventos e entretenimento</span>
+</label>
+</div>
+</div>
+<div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-primary">O que poderíamos aprimorar para sua próxima experiência? (Opcional)</h2>
+<div class="mt-4">
+<textarea id="aprimorar" name="aprimorar" class="w-full appearance-none rounded-lg border-2 border-primary/20 bg-background-light px-4 py-3 text-base font-medium text-primary placeholder-primary/50 focus:border-primary focus:outline-none focus:ring-0" placeholder="Resposta aberta"></textarea>
+</div>
+</div>
+</form>
+</main>
+<footer class="fixed bottom-0 left-0 z-10 w-full border-t border-primary/20 bg-background-light/80 p-4 backdrop-blur-sm">
+<div class="mx-auto flex w-full max-w-md items-center justify-between gap-4">
+<a href="expectativas.html" class="flex cursor-pointer items-center justify-center gap-2 text-sm font-bold text-primary">
+<span class="material-symbols-outlined">arrow_back</span>
+<span>Voltar</span>
+</a>
+<a id="avancar" href="encerramento.html" class="flex w-full max-w-xs cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-primary px-5 py-3 text-base font-bold text-background-light disabled">
+<span>Avançar</span>
+</a>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPFk-Hl1ib-AGficCBL8zlcLN_YkYoxQtoYe4kQatFz_CpgQ_b8LTBpqWpQ-vpIMLL/exec';
+        const form = document.getElementById('experiencia-form');
+        const avancarButton = document.getElementById('avancar');
+        const maxAllowedToco = 2;
+
+        let surveyData = JSON.parse(localStorage.getItem('surveyData')) || {};
+        if (surveyData.toco) surveyData.toco.split(', ').forEach(val => {
+            form.elements.toco.forEach(cb => { if(cb.value === val) cb.checked = true; });
+        });
+        if (surveyData.culinaria) form.elements.culinaria.value = surveyData.culinaria;
+        if (surveyData.lazer) surveyData.lazer.split(', ').forEach(val => {
+            form.elements.lazer.forEach(cb => { if(cb.value === val) cb.checked = true; });
+        });
+        if (surveyData.aprimorar) form.elements.aprimorar.value = surveyData.aprimorar;
+
+        const validateForm = () => {
+            const tocoCheckboxes = document.querySelectorAll('input[name="toco"]:checked');
+            if (tocoCheckboxes.length > maxAllowedToco) {
+                alert('Você pode escolher no máximo 2 opções para "O que mais te tocou".');
+                avancarButton.classList.add('disabled');
+                return false;
+            }
+            const isTocoValid = tocoCheckboxes.length > 0;
+            const isCulinariaValid = form.elements.culinaria.value !== '';
+            const isLazerValid = document.querySelectorAll('input[name="lazer"]:checked').length > 0;
+            const isValid = isTocoValid && isCulinariaValid && isLazerValid;
+
+            if (isValid) {
+                avancarButton.classList.remove('disabled');
+            } else {
+                avancarButton.classList.add('disabled');
+            }
+            return isValid;
+        };
+
+        form.addEventListener('change', validateForm);
+
+        avancarButton.addEventListener('click', async (e) => {
+            e.preventDefault();
+            if (!validateForm()) return;
+
+            avancarButton.classList.add('disabled');
+            avancarButton.textContent = 'Enviando...';
+
+            const formData = new FormData(form);
+            const newData = {
+                toco: formData.getAll('toco').join(', '),
+                culinaria: formData.get('culinaria'),
+                lazer: formData.getAll('lazer').join(', '),
+                aprimorar: formData.get('aprimorar'),
+            };
+
+            const existingData = JSON.parse(localStorage.getItem('surveyData')) || {};
+            const finalData = { ...existingData, ...newData };
+            
+            // Generate a unique ID and a timestamp
+            finalData.surveyId = Date.now().toString() + Math.random().toString(36).substring(2, 9);
+            finalData.data = new Date().toISOString();
+
+            // Store the surveyId for the next page
+            localStorage.setItem('surveyId', finalData.surveyId);
+            
+            // Save all data except the full surveyData object, which is no longer needed
+            localStorage.setItem('surveyData', JSON.stringify({})); // Clear old data
+
+            try {
+                await fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    cache: 'no-cache',
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                    redirect: 'follow',
+                    body: JSON.stringify(finalData)
+                });
+                
+                // Don't assume success, but navigate anyway
+                window.location.href = avancarButton.href;
+
+            } catch (error) {
+                console.error('Error submitting survey:', error);
+                alert('Houve um erro ao enviar sua pesquisa. Por favor, tente novamente.');
+                avancarButton.classList.remove('disabled');
+                avancarButton.textContent = 'Avançar';
+            }
+        });
+
+        validateForm();
+    });
+</script>
+</body></html>

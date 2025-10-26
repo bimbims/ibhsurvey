@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ibirahill - Suas Expectativas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#243133",
+            "background-light": "#cdc4ad",
+            "background-dark": "#171a1b",
+          },
+          fontFamily: {
+            "display": ["Epilogue", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+    .icon-filled {
+      font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+    .disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-background-light font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-10 flex w-full items-center justify-center border-b border-solid border-primary/20 bg-background-light px-6 py-4">
+<img src="/public/logogreen.png" class="h-12" alt="Ibirahill logo">
+</header>
+<main class="flex flex-1 flex-col overflow-x-auto px-6 pb-24 pt-8">
+<div class="flex w-full min-w-max items-start justify-between gap-2 pb-8">
+<div class="flex flex-col items-center gap-2 text-primary">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-background-light">
+<span class="material-symbols-outlined icon-filled text-2xl">check</span>
+</div>
+<span class="text-xs font-bold">Perfil</span>
+</div>
+<div class="h-px w-full flex-1 self-center bg-primary" style="margin-top: -1.25rem;"></div>
+<div class="flex flex-col items-center gap-2 text-primary">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-background-light">
+<span class="material-symbols-outlined icon-filled text-2xl">emoji_objects</span>
+</div>
+<span class="text-xs font-bold">Expectativas</span>
+</div>
+<div class="h-px w-full flex-1 self-center bg-primary/20" style="margin-top: -1.25rem;"></div>
+<div class="flex flex-col items-center gap-2 text-primary/50">
+<div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary/30">
+<span class="material-symbols-outlined text-2xl">hotel_class</span>
+</div>
+<span class="text-xs font-medium">Experiência</span>
+</div>
+<div class="h-px w-full flex-1 self-center bg-primary/20" style="margin-top: -1.25rem;"></div>
+<div class="flex flex-col items-center gap-2 text-primary/50">
+<div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary/30">
+<span class="material-symbols-outlined text-2xl">flag</span>
+</div>
+<span class="text-xs font-medium">Encerramento</span>
+</div>
+</div>
+<div class="mb-8 text-center">
+<p class="text-4xl font-black leading-tight tracking-[-0.033em] text-primary">Suas Expectativas</p>
+</div>
+<form id="expectativas-form" class="flex flex-col gap-10">
+<div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-primary">O que motivou sua viagem? (escolha até 2)</h2>
+<div class="mt-4 flex flex-col gap-3">
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 rounded border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="motivacao" type="checkbox" value="Descanso e relaxamento"/>
+<span class="text-base font-medium text-primary">Descanso e relaxamento</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 rounded border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="motivacao" type="checkbox" value="Comemoração especial"/>
+<span class="text-base font-medium text-primary">Comemoração especial</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 rounded border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="motivacao" type="checkbox" value="Turismo na região"/>
+<span class="text-base font-medium text-primary">Turismo na região</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 rounded border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="motivacao" type="checkbox" value="Aventura e natureza"/>
+<span class="text-base font-medium text-primary">Aventura e natureza</span>
+</label>
+</div>
+</div>
+<div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-primary">Quais critérios foram decisivos na sua escolha?</h2>
+<div class="mt-4 flex flex-col gap-3">
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 rounded border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="criterios" type="checkbox" value="Preço"/>
+<span class="text-base font-medium text-primary">Preço</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 rounded border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="criterios" type="checkbox" value="Localização e vista"/>
+<span class="text-base font-medium text-primary">Localização e vista</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 rounded border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="criterios" type="checkbox" value="Fotos e design"/>
+<span class="text-base font-medium text-primary">Fotos e design</span>
+</label>
+<label class="flex cursor-pointer items-center gap-4 rounded-lg border-2 border-primary/20 p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+<input class="h-5 w-5 rounded border-2 border-primary text-primary focus:ring-primary focus:ring-offset-background-light" name="criterios" type="checkbox" value="Comodidades oferecidas"/>
+<span class="text-base font-medium text-primary">Comodidades oferecidas</span>
+</label>
+</div>
+</div>
+<div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-primary">Como você ficou sabendo do Ibirahill?</h2>
+<div class="mt-4">
+  <select class="w-full rounded-lg border-2 border-primary/20 p-4 focus:border-primary focus:ring-primary focus:ring-offset-background-light" name="comoSoube" required>
+    <option value="" disabled selected>Selecione uma opção</option>
+    <option value="Instagram">Instagram</option>
+    <option value="Facebook">Facebook</option>
+    <option value="Google">Google</option>
+    <option value="Indicação">Indicação</option>
+    <option value="Airbnb">Airbnb</option>
+    <option value="Outros">Outros</option>
+  </select>
+</div>
+</div>
+</form>
+</main>
+<footer class="fixed bottom-0 left-0 z-10 w-full border-t border-primary/20 bg-background-light/80 p-4 backdrop-blur-sm">
+<div class="mx-auto flex w-full max-w-md items-center justify-between gap-4">
+<a href="index.html" class="flex cursor-pointer items-center justify-center gap-2 text-sm font-bold text-primary">
+<span class="material-symbols-outlined">arrow_back</span>
+<span>Voltar</span>
+</a>
+<a id="avancar" href="experiencia.html" class="flex w-full max-w-xs cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-primary px-5 py-3 text-base font-bold text-background-light disabled">
+<span>Avançar</span>
+</a>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('expectativas-form');
+        const avancarButton = document.getElementById('avancar');
+        const maxAllowedMotivacao = 2;
+
+        // Load existing data from localStorage to pre-fill the form
+        let surveyData = JSON.parse(localStorage.getItem('surveyData')) || {};
+        if (surveyData.motivacao) surveyData.motivacao.split(', ').forEach(val => {
+            form.elements.motivacao.forEach(cb => { if(cb.value === val) cb.checked = true; });
+        });
+        if (surveyData.criterios) surveyData.criterios.split(', ').forEach(val => {
+            form.elements.criterios.forEach(cb => { if(cb.value === val) cb.checked = true; });
+        });
+        if (surveyData.comoSoube) form.elements.comoSoube.value = surveyData.comoSoube;
+
+        const validateForm = () => {
+            const motivacaoCheckboxes = document.querySelectorAll('input[name="motivacao"]:checked');
+            if (motivacaoCheckboxes.length > maxAllowedMotivacao) {
+                // This is a user-facing alert, so it can stay.
+                alert('Você pode escolher no máximo 2 opções para "O que motivou sua viagem?".');
+                avancarButton.classList.add('disabled');
+                return false;
+            }
+            const isMotivacaoValid = motivacaoCheckboxes.length > 0;
+            const isCriteriosValid = document.querySelectorAll('input[name="criterios"]:checked').length > 0;
+            const isComoSoubeValid = form.elements.comoSoube.value !== '';
+            const isValid = isMotivacaoValid && isCriteriosValid && isComoSoubeValid;
+
+            if (isValid) {
+                avancarButton.classList.remove('disabled');
+            } else {
+                avancarButton.classList.add('disabled');
+            }
+            return isValid;
+        };
+
+        form.addEventListener('change', validateForm);
+
+        avancarButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (!validateForm()) {
+                return;
+            }
+
+            // Collect data from this form
+            const formData = new FormData(form);
+            const newData = {
+                motivacao: formData.getAll('motivacao').join(', '),
+                criterios: formData.getAll('criterios').join(', '),
+                comoSoube: formData.get('comoSoube'),
+            };
+
+            // Merge with existing data and save back to localStorage
+            const existingData = JSON.parse(localStorage.getItem('surveyData')) || {};
+            const finalData = { ...existingData, ...newData };
+            localStorage.setItem('surveyData', JSON.stringify(finalData));
+            
+            // Navigate to the next page
+            window.location.href = avancarButton.href;
+        });
+
+        // Initial validation check
+        validateForm();
+    });
+</script>
+</body></html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Script Test</title>
+</head>
+<body>
+
+  <h1>Test Google Apps Script Submission</h1>
+  <p>Clicking this button will attempt to send a simple piece of data to your script.</p>
+  <button id="test-button">Send Test Data</button>
+  <p id="status"></p>
+
+<script>
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwmRTfY5QqdJZ57wOpZvEaVkcVDF4rGmrCfa4ZWXLm3WQ1awGTIQrMW-9szV2c2_5_kbg/exec';
+    const testButton = document.getElementById('test-button');
+    const status = document.getElementById('status');
+
+    testButton.addEventListener('click', () => {
+        status.textContent = 'Sending...';
+        testButton.disabled = true;
+
+        const testData = {
+            "test_id": "12345",
+            "message": "Hello, World!"
+        };
+
+        fetch(SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            cache: 'no-cache',
+            headers: {
+                'Content-Type': 'text/plain;charset=utf-8',
+            },
+            redirect: 'follow',
+            body: JSON.stringify(testData)
+        })
+        .then(() => {
+            // Because of no-cors, we can't see the response. We just know it was sent.
+            status.textContent = 'Data has been sent. Please check the "TestLog" sheet in your spreadsheet.';
+            status.style.color = 'green';
+        })
+        .catch(error => {
+            // This part is unlikely to run with no-cors, but included for completeness.
+            status.textContent = 'An error occurred. The request could not be sent. ' + error;
+            status.style.color = 'red';
+        });
+    });
+</script>
+
+</body>
+</html>
